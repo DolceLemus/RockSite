@@ -17,7 +17,15 @@ https://www.youtube.com/watch?v=uUGHF0dM6GA
 
 .container {
     width: 100%;
-    max-width: 1000px;
+    max-width: 992px;
+    margin: 0 auto;
+}
+
+.container-fluid{
+    width: 100%;
+}
+.container-fluid .row{
+    max-width: 992px;
     margin: 0 auto;
 }
 
@@ -30,9 +38,9 @@ https://www.youtube.com/watch?v=uUGHF0dM6GA
 
 [class *='col-'] {
     float: left;
-    min-height: 7px;
+    min-height: 1em;
     /**gutters**/
-    padding: 12px;
+    padding: 1em;
 }
 
 /** 100/12*columnas **/
@@ -50,9 +58,17 @@ https://www.youtube.com/watch?v=uUGHF0dM6GA
 .col-12{ width:100%; }
 
 /** Primer Breakpoint de bootstrap **/
-@media all and (max-width:450px){
+@media (max-width:576px){
     [class *='col-'] {
        width: 100%;
+    }
+    .hide-on-mobile {
+        display: none;
+    }
+}
+@media (min-width:576px){
+    .hide-on-desktop {
+        display: none;
     }
 }
 /** End of Grid System **/
